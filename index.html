@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="modal-box hidden">
+        <div class="winner"></div>
+        <div class="play-again">
+          <div>Play again?</div>
+          <div>
+            <button class="again-yes">Yes</button
+            ><!--
+            --><button class="again-no">No</button>
+          </div>
+        </div>
+      </div>
+
+      <span class="current-player"> </span>
+      <div class="inputs">
+        <label for="player1">Player 1</label>
+        <input type="text" name="player1" id="player1" placeholder="Name" />
+
+        <label for="player2">Player 2</label>
+        <input type="text" name="player2" id="player2" placeholder="Name" />
+
+        <label for="size">Size</label>
+        <select name="size" id="size">
+          <option value="3">3 x 3</option>
+          <option value="4">4 x 4</option>
+          <option value="5">5 x 5</option>
+          <option value="6">6 x 6</option>
+          <option value="7">7 x 7</option>
+          <option value="8">8 x 8</option>
+        </select>
+
+        <div class="group">
+          <label for="MODE_COMPLET">Normal mode</label
+          ><!--
+          --><input type="radio" name="MODE" id="MODE_COMPLET" value="MODE_COMPLET" checked /><!--
+          --><label for="MODE_SIMPLE">Simple mode (3 symbols to win)</label
+          ><!--
+          --><input type="radio" name="MODE" id="MODE_SIMPLE" value="MODE_SIMPLE" />
+        </div>
+
+        <button class="validate">Start</button>
+      </div>
+
+      <div class="score">
+        <span class="green">Score</span>
+        <div>
+          <span class="player1"></span>
+          <span class="dash">-</span>
+          <span class="player1-score"></span>
+        </div>
+        <div>
+          <span class="player2"></span>
+          <span class="dash">-</span>
+          <span class="player2-score"></span>
+        </div>
+      </div>
+      <div class="grid hidden"></div>
+    </main>
+    <script src="td7.js" type="module"></script>
+  </body>
+</html>
