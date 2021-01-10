@@ -159,4 +159,4 @@ export class Player {
         this.score = score;
     }
 }
-//# sourceMappingURL=morpion.js.map
+//# sourceMappingURL=tictactoe.js.map

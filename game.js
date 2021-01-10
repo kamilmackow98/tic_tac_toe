@@ -1,4 +1,4 @@
-import { Morpion, MorpionSimple } from "./morpion.js";
+import { Morpion, MorpionSimple } from "./tictactoe.js";
 /* ------------------------------ */
 /* -----| HELPER FUNCTIONS |----- */
 /* ------------------------------ */
@@ -87,13 +87,13 @@ async function initCells(size, mode) {
 function playAgain() {
     const winnerEl = getElement(".winner");
     if (morpion.tie) {
-        winnerEl.innerHTML = "Personne n'a gagné";
+        winnerEl.innerHTML = "It's a tie!";
         showEl(".modal-box");
     }
     else {
         morpion.current_player === morpion.player1
-            ? (winnerEl.innerHTML = `<span class="green">${morpion.current_player.name}</span> a gagné!`)
-            : (winnerEl.innerHTML = `<span class="red">${morpion.current_player.name}</span> a gagné!`);
+            ? (winnerEl.innerHTML = `<span class="green">${morpion.current_player.name}</span> won!`)
+            : (winnerEl.innerHTML = `<span class="red">${morpion.current_player.name}</span> won!`);
         showEl(".modal-box");
     }
 }
@@ -155,4 +155,4 @@ getElement(".again-yes").addEventListener("click", resetGame);
 getElement(".again-no").addEventListener("click", resetAll);
 let initialized = false;
 let morpion;
-//# sourceMappingURL=td7.js.map
+//# sourceMappingURL=game.js.map

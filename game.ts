@@ -1,4 +1,4 @@
-import { Morpion, MorpionSimple } from "./morpion.js";
+import { Morpion, MorpionSimple } from "./tictactoe.js";
 
 /* ------------------------------ */
 /* -----| HELPER FUNCTIONS |----- */
@@ -17,7 +17,7 @@ function showEl(selector: string) {
 }
 
 function sleep(time: number) {
-  return new Promise((resolve) =>
+  return new Promise<void>((resolve) =>
     setTimeout(() => {
       resolve();
     }, time)
@@ -113,12 +113,12 @@ function playAgain() {
   const winnerEl = getElement(".winner");
 
   if (morpion.tie) {
-    winnerEl.innerHTML = "Personne n'a gagné";
+    winnerEl.innerHTML = "It's a tie!";
     showEl(".modal-box");
   } else {
     morpion.current_player === morpion.player1
-      ? (winnerEl.innerHTML = `<span class="green">${morpion.current_player.name}</span> a gagné!`)
-      : (winnerEl.innerHTML = `<span class="red">${morpion.current_player.name}</span> a gagné!`);
+      ? (winnerEl.innerHTML = `<span class="green">${morpion.current_player.name}</span> won!`)
+      : (winnerEl.innerHTML = `<span class="red">${morpion.current_player.name}</span> won!`);
     showEl(".modal-box");
   }
 }
